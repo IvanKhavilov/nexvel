@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,47 +10,66 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <a class="logo" href="#">
-            <img class="logo__img" src="images/logo.svg" alt="logo" />
-            EDUCATION
-          </a>
-          <nav class="menu">
-            <button class="menu__btn">
-              <span></span>
-            </button>
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Про нас</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Кейси учнів</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Бізнес</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Професії</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Особистий кабінет</a>
-              </li>
-            </ul>
-          </nav>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-inner">
+            <div class="header__top-descr">
+              <img class="header__top-img" src="images/gift.png" alt="gift" />
+              <span>Купуй курс та отримай "щось" ціною n$ у подарунок</span>
+            </div>
+            <div id="ten-countdown"></div>
+          </div>
         </div>
       </div>
+
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__bottom-inner">
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/logo.svg" alt="logo" />
+              <br />
+              EDUCATION
+            </a>
+            <nav class="menu">
+              <button class="menu__btn">
+                <span></span>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Про нас</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Кейси учнів</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Бізнес</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Професії</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Особистий кабінет</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <section class="smm">
+        <div class="container">
+          <div class="smm__inner">
+            <div class="smm__income">Дохід: від <b>400$</b> / мес</div>
+            <div class="smm__descr">
+              <h1 class="smm__title">SMM-менеджер</h1>
+              <p class="smm__subtitle">Навчись просувати бізнеси в інтернеті і заробляй від 500$ вже з цього місяця</p>
+            </div>
+            <button class="smm__btn">Записатися на курс 🚀</button>
+          </div>
+        </div>
+      </section>
     </header>
 
-    <main class="main">
-      <div class="container"></div>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner"></div>
-      </div>
-    </footer>
+    <main class="main"></main>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
