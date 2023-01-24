@@ -57,21 +57,17 @@ tabs.addEventListener("click", e => {
   }
 });
 
-// const changeTab = el => {
-//   for (let i = 0; i < subTabs.children.length; i++) {
-//     subTabs.children[i].classList.remove("active");
-//   }
-//   el.classList.add("active");
-// };
-
-// subTabs.addEventListener("click", e => {
-//   const defines = e.target.dataset.btn;
-//   changeTab(e.target);
-
-//   for (let i = 0; i < subContents.length; i++) {
-//     subContents[i].classList.remove("active");
-//     if (subContents[i].dataset.content === defines) {
-//       subContents[i].classList.add("active");
-//     }
-//   }
-// });
+new Swiper(".feedback__slides-wrapp", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 5,
+  spaceBetween: 32,
+  centeredSlides: true,
+  initialSlide: 2,
+});
