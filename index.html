@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -69,9 +70,210 @@
       </section>
     </header>
 
-    <main class="main"></main>
+    <section class="video">
+      <div class="container">
+        <h2 class="title">Що буде у навчанні:</h2>
+        <div class="video__inner" style="background-image: url(images/video-bg.jpg)">
+          <a class="video__popup" data-fancybox href="https://www.youtube.com/watch?v=WeAj5uOunYY">
+            <div class="video__play">
+              <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.5987 13.6476C24.1943 14.0011 24.1943 14.8633 23.5987 15.2167L1.66735 28.2305C1.05923 28.5914 0.289538 28.1531 0.289538 27.446L0.289539 1.41839C0.289539 0.711269 1.05923 0.272993 1.66735 0.633841L23.5987 13.6476Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="income">
+      <div class="container">
+        <h2 class="title">
+          Як зростатиме ваш заробіток <br />
+          після навчання
+        </h2>
+      </div>
+    </section>
+
+    <section class="program">
+      <div class="container">
+        <div class="program__inner">
+          <h2 class="title">Програма курсу</h2>
+          <div class="program__tabs" id="tabs">
+            <div class="program__tab active" data-btn="1">МОДУЛЬ 1</div>
+            <div class="program__tab" data-btn="2">МОДУЛЬ 2</div>
+            <div class="program__tab" data-btn="3">МОДУЛЬ 3</div>
+            <div class="program__tab" data-btn="4">МОДУЛЬ 4</div>
+          </div>
+          <div class="program__contents" id="contents">
+            <div class="program__content active" data-content="1">
+              <div class="program__title">
+                <img class="program__title-img" src="images/program-icon-1.png" alt="icon" />
+                <p class="program__title-text">
+                  Як правильно вибрати товар та <br />
+                  постачальників
+                </p>
+              </div>
+              <div class="program__box">
+                <div class="program__box-title">Про що модуль?</div>
+                <ul class="program__box-text">
+                  <li class="program__box-item">
+                    🛍️ Помилки новачка, знаючи які, ви зможете збільшити прибуток у рази, поки ваші конкуренти зазнають втрат
+                  </li>
+                  <li class="program__box-item">🛍️ Безпомилкове визначення попиту на всі категорії товарів</li>
+                  <li class="program__box-item">🛍️ Пошук товарної ніші, яка підірве ваші продажі</li>
+                  <li class="program__box-item">🛍️ Пошук та налагодження комунікацій з постачальником</li>
+                </ul>
+              </div>
+              <div class="program__box program__box--red">
+                <div class="program__box-title">Результат уроку:</div>
+                <p class="program__box-text">
+                  В результаті першого уроку ви знайдете затребуваний товар та постачальників, щоб почати заробляти ВІДРАЗУ
+                </p>
+              </div>
+            </div>
+            <div class="program__content" data-content="2">Content 2</div>
+            <div class="program__content" data-content="3">Content 3</div>
+            <div class="program__content" data-content="4">Content 4</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="speaker">
+      <div class="container">
+        <h2 class="title">Спікер</h2>
+        <div class="speaker__inner">
+          <div class="speaker__info">
+            <div class="speaker__photo">
+              <img class="speaker__img" src="images/speaker.jpg" alt="speacer photo" />
+            </div>
+            <div class="speaker__descr">
+              <h4 class="speaker__name">Вікторія Галіка</h4>
+              <p class="speaker__subname">Керуючий партнер NGN AGENCY</p>
+              <ul class="speaker__list">
+                <li class="speaker__item">12 років досвід у маркетингу та digital</li>
+                <li class="speaker__item">Експерт у маркетингу 360 – з охопленням широкої аудиторії</li>
+                <li class="speaker__item">
+                  Працював як на стороні агенцій, так і на стороні клієнта у сферах Tech, Retail, Finance
+                </li>
+                <li class="speaker__item">
+                  Проводить маркетинг/digital стратегічні консультації для локальних та міжнародних компаній
+                </li>
+                <li class="speaker__item">
+                  Досвід із різними типами бізнесу: від малих компаній до великих FMCG брендів у КАМА, спікер та співорганізатор
+                  SMM Rocks
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price">
+      <div class="container">
+        <h2 class="title">Вартість навчання</h2>
+        <div class="price__inner">
+          <div class="price__item">
+            <h5 class="price__title">Тариф стандарт</h5>
+            <ul class="price__list">
+              <li class="price__list-item">4 модулі курсу</li>
+              <li class="price__list-item">Доступ до платформи</li>
+              <li class="price__list-item">Телеграм-бот з бонусами</li>
+            </ul>
+            <div class="price__wrapp">
+              <span class="price__new">20$</span>
+              <span class="price__old">60$</span>
+            </div>
+            <button class="price__btn">Придбати</button>
+          </div>
+          <div class="price__item price__item--red">
+            <h5 class="price__title">Тариф перміум</h5>
+            <ul class="price__list">
+              <li class="price__list-item">4 модулі курсу</li>
+              <li class="price__list-item">Доступ до платформи</li>
+              <li class="price__list-item">Телеграм-бот з бонусами</li>
+              <li class="price__list-item">Зворотній зв'язок на домашні завдання</li>
+              <li class="price__list-item">2 дзвінки з наставником</li>
+              <li class="price__list-item">Доступ до загального чату курсу</li>
+              <li class="price__list-item">Диплом</li>
+            </ul>
+            <div class="price__wrapp">
+              <span class="price__new">120$</span>
+              <span class="price__old">240$</span>
+            </div>
+            <button class="price__btn">Придбати</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback">
+      <div class="container">
+        <h2 class="title">Відгуки</h2>
+      </div>
+    </section>
+
+    <section class="cases">
+      <div class="container"></div>
+    </section>
+
+    <section class="question">
+      <div class="container">
+        <h2 class="title">
+          Відповіді на питання, що часто <br />
+          ставляться:
+        </h2>
+        <div class="question__inner question__inner--one">
+          <div class="question__item">
+            <div class="question__title">❓ Що зрештою ?</div>
+            <ul class="question__body">
+              <li class="question__body-item">Введення у професію.</li>
+              <li class="question__body-item">Огляд навичок, які необхідні для роботи Ознайомлення з рекламним кабінетом.</li>
+              <li class="question__body-item">Базові налаштування та підготовка до реклами.</li>
+            </ul>
+          </div>
+          <div class="question__item">
+            <div class="question__title">🤔 Чи можу я повернути кошти ?</div>
+            <p class="question__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatibus ea amet doloremque officia!
+              Exercitationem ad reiciendis, consectetur illo dolores dignissimos ipsum alias eum. Laborum magnam libero nisi quasi
+              fuga!
+            </p>
+          </div>
+          <div class="question__item">
+            <div class="question__title">⏰ Скільки триває курс ?</div>
+            <ul class="question__body">
+              <li class="question__body-item">Введення у професію.</li>
+              <li class="question__body-item">Огляд навичок, які необхідні для роботи Ознайомлення з рекламним кабінетом.</li>
+              <li class="question__body-item">Базові налаштування та підготовка до реклами.</li>
+            </ul>
+          </div>
+          <div class="question__item">
+            <div class="question__title">📅 Як довго є доступ до курсу та відео ?</div>
+            <ul class="question__body">
+              <li class="question__body-item">Введення у професію.</li>
+              <li class="question__body-item">Огляд навичок, які необхідні для роботи Ознайомлення з рекламним кабінетом.</li>
+              <li class="question__body-item">Базові налаштування та підготовка до реклами.</li>
+            </ul>
+          </div>
+          <div class="question__item">
+            <div class="question__title">💰 Чи можна оплатити частинами ?</div>
+            <ul class="question__body">
+              <li class="question__body-item">Введення у професію.</li>
+              <li class="question__body-item">Огляд навичок, які необхідні для роботи Ознайомлення з рекламним кабінетом.</li>
+              <li class="question__body-item">Базові налаштування та підготовка до реклами.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
   </body>
