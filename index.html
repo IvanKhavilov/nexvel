@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -93,6 +94,16 @@
           Як зростатиме ваш заробіток <br />
           після навчання
         </h2>
+        <div class="income__inner">
+          <div class="income__calc">
+            <div class="range__slider" id="range__slider"></div>
+          </div>
+          <div class="income__values">
+            <div class="income__values-item">Відразу після <br> навчання</div>
+            <div class="income__values-item">6 місяців <br> роботи</div>
+            <div class="income__values-item">12 місяців <br> роботи</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -218,64 +229,73 @@
             <div class="swiper-pagination"></div>
             <div class="feedback__slides swiper-wrapper">
               <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/Telegram.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">
-                  + 20 000 під час <br />
-                  навчання
-                </p>
+                <img class="feedback__img" src="images/screen/miss__dragos.jpeg" alt="feedback screenshot" />                
               </div>
               <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-2.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">
-                  + 20 000 під час <br />
-                  навчання
-                </p>
+                <img class="feedback__img" src="images/screen/tyshchuk_iryna.jpeg" alt="feedback screenshot" />
               </div>
               <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-3.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
+                <img class="feedback__img" src="images/screen/yura.kokhannn.jpeg" alt="feedback screenshot" />
               </div>
               <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-4.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
+                <img class="feedback__img" src="images/screen/marrryos.jpeg" alt="feedback screenshot" />
               </div>
               <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-5.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
+                <img class="feedback__img" src="images/screen/pattystore.ua.jpeg" alt="feedback screenshot" />
               </div>
               <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-1.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
-              </div>
-              <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-2.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
-              </div>
-              <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-3.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
-              </div>
-              <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-4.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
-              </div>
-              <div class="feedback__slide swiper-slide">
-                <img class="feedback__img" src="images/screen-5.jpg" alt="feedback screenshot" />
-                <a class="feedback__link" href="#">@daria087</a>
-                <p class="feedback__text">+ 20 000 під час навчання</p>
+                <img class="feedback__img" src="images/screen/anatolignagernyak.jpeg" alt="feedback screenshot" />
               </div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+          </div>
+          
+          <div thumbsSlider="" class="thumbs__swiper mySwiper">
+            <div class=" swiper-wrapper">
+              <div class="feedback__user swiper-slide">
+                <a class="feedback__link" href="#">@miss__dragos</a>
+                <p class="feedback__text">
+                  +450$ під час <br />
+                  навчання
+                </p>
+              </div>
+              <div class="feedback__user swiper-slide">
+                <a class="feedback__link" href="#">@tyshchuk_iryna</a>
+                <p class="feedback__text">
+                  +6000$  під час <br />
+                  навчання
+                </p>
+              </div>
+              <div class="feedback__user swiper-slide">
+                <a class="feedback__link" href="#">@yura.kokhannn</a>
+                <p class="feedback__text">
+                  +375$ під час <br />
+                  навчання
+                </p>
+              </div>
+              <div class="feedback__user swiper-slide">
+                <a class="feedback__link" href="#">@marrryos</a>
+                <p class="feedback__text">
+                  +325$ під час <br />
+                  навчання
+                </p>
+              </div>
+              <div class="feedback__user swiper-slide">
+                <a class="feedback__link" href="#">@pattystore.ua</a>
+                <p class="feedback__text">
+                  +1750$  під час <br />
+                  навчання
+                </p>
+              </div>
+              <div class="feedback__user swiper-slide">
+                <a class="feedback__link" href="#">@anatolignagernyak </a>
+                <p class="feedback__text">
+                  + 400 під час <br />
+                  навчання
+                </p>
+              </div>
+            </div>
           </div>
           <a class="feedback__btn" href="#">Ще відгуки</a>
         </div>
@@ -339,9 +359,9 @@
                     <img class="cases__modal-slider__item swiper-slide" src="images/screen-1.jpg" alt="screen"></img>
                     <img class="cases__modal-slider__item swiper-slide" src="images/screen-2.jpg" alt="screen"></img>
                   </div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
+                  <div class="cases-pagination"></div>
+                  <div class="cases__modal-slider-next swiper-button-next"></div>
+                  <div class="cases__modal-slider-prev swiper-button-prev"></div>
                 </div>
               </div>
             </div>
@@ -466,8 +486,8 @@
             </div>
 
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="cases__btn-next swiper-button-next"></div>
+          <div class="cases__btn-prev swiper-button-prev"></div>
         </div>
         <div class="cases__btn-wrapp">
           <span class="cases__btn-decor">💸</span>
@@ -530,6 +550,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
   </body>
