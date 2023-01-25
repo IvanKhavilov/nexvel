@@ -10,19 +10,18 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__top">
-        <div class="container">
-          <div class="header__top-inner">
-            <div class="header__top-descr">
-              <img class="header__top-img" src="images/gift.png" alt="gift" />
-              <span>Купуй курс та отримай "щось" ціною n$ у подарунок</span>
-            </div>
-            <div id="ten-countdown"></div>
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <div class="header__top-descr">
+            <img class="header__top-img" src="images/gift.png" alt="gift" />
+            <span>Купуй курс та отримай "щось" ціною n$ у подарунок</span>
           </div>
+          <div id="ten-countdown"></div>
         </div>
       </div>
-
+    </div>
+    <header class="header">
       <div class="header__bottom">
         <div class="container">
           <div class="header__bottom-inner">
@@ -37,10 +36,10 @@
               </button>
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Про нас</a>
+                  <a class="menu__link" href="#abour">Про нас</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Кейси учнів</a>
+                  <a class="menu__link" href="#cases">Кейси учнів</a>
                 </li>
                 <li class="menu__item">
                   <a class="menu__link" href="#">Бізнес</a>
@@ -283,8 +282,199 @@
       </div>
     </section>
 
-    <section class="cases">
-      <div class="container"></div>
+    <section class="cases" id="cases">
+      <div class="container">
+        <div class="cases__inner">
+          <div class="cases__slider swiper-wrapper">
+            <div class="cases__item swiper-slide">
+              <div class="cases__item-wrepp">
+                <div class="cases__user" style="background-image: url(images/cases1.jpg)">
+                  <p class="cases__user-name">Діана - студентка</p>
+                  <div class="cases__jump">
+                    <div class="cases__jump-a">
+                      <p class="cases__jump-title">ТОЧКА А</p>
+                      <div class="cases__jump-num">80$/міс</div>
+                    </div>
+                    <div class="cases__jump-b">
+                      <p class="cases__jump-title">ТОЧКА Б</p>
+                      <div class="cases__jump-num cases__jump-num--red">410$/міс</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="cases__read" data-fancybox data-src="#1" href="#">Читати кейс</a>
+              </div>
+              <div class="cases__modal" id="1">
+                <div class="cases__modal-box">
+                  <div class="cases__modal-user">
+                    <div class="cases__modal-photo">
+                      <img class="cases__modal-img" src="images/photo.jpg" alt="photo" />
+                    </div>
+                    <div class="cases__modal-name">
+                      <div class="cases__modal-name__title">Аліна Муріна</div>
+                      <div class="cases__modal-name__subtitle">@alina_murinaaa</div>
+                    </div>
+                    <dl>
+                      <dt>ніша:</dt>
+                      <dd>упаковка брендів та консультація</dd>
+                    </dl>
+                  </div>
+                  <p class="cases__modal-descr">
+                    Аліна продає товари та одяг на маркетплейсах та заробляє на цьому быльше 30 000 грн у місяць
+                  </p>
+                  <div class="cases__modal-jump">
+                    <div class="cases__modal-jump__item">
+                      <div class="cases__modal-jump__title">ТОЧКА А</div>
+                      <div class="cases__modal-jump__title">ЗАРОБЛЯЄ 240$</div>
+                      <div class="cases__modal-jump__subtitle">студентка</div>
+                    </div>
+                    <div class="cases__modal-jump__item">
+                      <div class="cases__modal-jump__title">ТОЧКА Б</div>
+                      <div class="cases__modal-jump__title">ЗАРОБЛЯЄ 1320$</div>
+                      <div class="cases__modal-jump__subtitle">своя товарна справа</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cases__modal-slider__inner">
+                  <div class="cases__modal-slider swiper-wrapper">
+                    <img class="cases__modal-slider__item swiper-slide" src="images/screen-1.jpg" alt="screen"></img>
+                    <img class="cases__modal-slider__item swiper-slide" src="images/screen-2.jpg" alt="screen"></img>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases__item swiper-slide">
+              <div class="cases__item-wrepp">
+                <div class="cases__user" style="background-image: url(images/cases2.jpg)">
+                  <p class="cases__user-name">Вікторія - мама в декреті</p>
+                  <div class="cases__jump">
+                    <div class="cases__jump-a">
+                      <p class="cases__jump-title">ТОЧКА А</p>
+                      <div class="cases__jump-num">80$/міс</div>
+                    </div>
+                    <div class="cases__jump-b">
+                      <p class="cases__jump-title">ТОЧКА Б</p>
+                      <div class="cases__jump-num cases__jump-num--red">410$/міс</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="cases__read" href="#" data-fancybox data-src="#2">Читати кейс</a>
+              </div>
+              <div class="cases__item-modal" id="2"></div>
+            </div>
+            <div class="cases__item swiper-slide">
+              <div class="cases__item-wrepp">
+                <div class="cases__user" style="background-image: url(images/cases1.jpg)">
+                  <p class="cases__user-name">Діана - студентка</p>
+                  <div class="cases__jump">
+                    <div class="cases__jump-a">
+                      <p class="cases__jump-title">ТОЧКА А</p>
+                      <div class="cases__jump-num">80$/міс</div>
+                    </div>
+                    <div class="cases__jump-b">
+                      <p class="cases__jump-title">ТОЧКА Б</p>
+                      <div class="cases__jump-num cases__jump-num--red">410$/міс</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="cases__read" href="#" data-fancybox data-src="#3">Читати кейс</a>
+              </div>
+              <div class="cases__item-modal" id="3"></div>
+            </div>
+
+            <div class="cases__item swiper-slide">
+              <div class="cases__item-wrepp">
+                <div class="cases__user" style="background-image: url(images/cases2.jpg)">
+                  <p class="cases__user-name">Вікторія - мама в декреті</p>
+                  <div class="cases__jump">
+                    <div class="cases__jump-a">
+                      <p class="cases__jump-title">ТОЧКА А</p>
+                      <div class="cases__jump-num">80$/міс</div>
+                    </div>
+                    <div class="cases__jump-b">
+                      <p class="cases__jump-title">ТОЧКА Б</p>
+                      <div class="cases__jump-num cases__jump-num--red">410$/міс</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="cases__read" href="">Читати кейс</a>
+              </div>
+
+              <div class="cases__item-modal"></div>
+            </div>
+            <div class="cases__item swiper-slide">
+              <div class="cases__item-wrepp">
+                <div class="cases__user" style="background-image: url(images/cases1.jpg)">
+                  <p class="cases__user-name">Діана - студентка</p>
+                  <div class="cases__jump">
+                    <div class="cases__jump-a">
+                      <p class="cases__jump-title">ТОЧКА А</p>
+                      <div class="cases__jump-num">80$/міс</div>
+                    </div>
+                    <div class="cases__jump-b">
+                      <p class="cases__jump-title">ТОЧКА Б</p>
+                      <div class="cases__jump-num cases__jump-num--red">410$/міс</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="cases__read" href="">Читати кейс</a>
+              </div>
+              <div class="cases__item-modal"></div>
+            </div>
+
+            <div class="cases__item swiper-slide">
+              <div class="cases__item-wrepp">
+                <div class="cases__user" style="background-image: url(images/cases2.jpg)">
+                  <p class="cases__user-name">Вікторія - мама в декреті</p>
+                  <div class="cases__jump">
+                    <div class="cases__jump-a">
+                      <p class="cases__jump-title">ТОЧКА А</p>
+                      <div class="cases__jump-num">80$/міс</div>
+                    </div>
+                    <div class="cases__jump-b">
+                      <p class="cases__jump-title">ТОЧКА Б</p>
+                      <div class="cases__jump-num cases__jump-num--red">410$/міс</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="cases__read" href="">Читати кейс</a>
+              </div>
+
+              <div class="cases__item-modal"></div>
+            </div>
+            <div class="cases__item swiper-slide">
+              <div class="cases__item-wrepp">
+                <div class="cases__user" style="background-image: url(images/cases1.jpg)">
+                  <p class="cases__user-name">Діана - студентка</p>
+                  <div class="cases__jump">
+                    <div class="cases__jump-a">
+                      <p class="cases__jump-title">ТОЧКА А</p>
+                      <div class="cases__jump-num">80$/міс</div>
+                    </div>
+                    <div class="cases__jump-b">
+                      <p class="cases__jump-title">ТОЧКА Б</p>
+                      <div class="cases__jump-num cases__jump-num--red">410$/міс</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="cases__read" href="">Читати кейс</a>
+              </div>
+              <div class="cases__item-modal"></div>
+            </div>
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="cases__btn-wrapp">
+          <span class="cases__btn-decor">💸</span>
+          <button class="cases__btn">Хочу так само</button>
+          <span class="cases__btn-decor">💸</span>
+        </div>
+      </div>
     </section>
 
     <section class="question">

@@ -1,4 +1,10 @@
 $(function () {
+  $(".menu a").on("click", function () {
+    var id = $(this).attr("href"),
+      top = $(id).offset().top;
+    $("body,html").animate({ scrollTop: top }, 1500);
+  });
+
   function countdown(elementName, minutes, seconds) {
     let element, endTime, hours, mins, msLeft, time;
 
@@ -70,4 +76,14 @@ new Swiper(".feedback__slides-wrapp", {
   spaceBetween: 32,
   centeredSlides: true,
   initialSlide: 2,
+  loop: true,
+});
+
+new Swiper(".cases__inner", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 3.5,
+  spaceBetween: 40,
 });
