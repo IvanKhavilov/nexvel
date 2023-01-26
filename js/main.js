@@ -77,27 +77,24 @@ noUiSlider
     $(".noUi-horizontal .noUi-handle").toggleClass("senior", currentValue >= 0.78);
   });
 
-const tabs = document.getElementById("tabs");
-const contents = document.querySelectorAll(".program__content");
+// const changeClass = el => {
+//   for (let i = 0; i < tabs.children.length; i++) {
+//     tabs.children[i].classList.remove("active");
+//   }
+//   el.classList.add("active");
+// };
 
-const changeClass = el => {
-  for (let i = 0; i < tabs.children.length; i++) {
-    tabs.children[i].classList.remove("active");
-  }
-  el.classList.add("active");
-};
+// tabs.addEventListener("click", e => {
+//   const currTab = e.target.dataset.btn;
+//   changeClass(e.target);
 
-tabs.addEventListener("click", e => {
-  const currTab = e.target.dataset.btn;
-  changeClass(e.target);
-
-  for (let i = 0; i < contents.length; i++) {
-    contents[i].classList.remove("active");
-    if (contents[i].dataset.content === currTab) {
-      contents[i].classList.add("active");
-    }
-  }
-});
+//   for (let i = 0; i < contents.length; i++) {
+//     contents[i].classList.remove("active");
+//     if (contents[i].dataset.content === currTab) {
+//       contents[i].classList.add("active");
+//     }
+//   }
+// });
 
 const swiperBig = new Swiper(".feedback__slides-wrapp", {
   initialSlide: 2,
@@ -151,6 +148,7 @@ new Swiper(".cases__inner", {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      spaceBetween: 10,
       centeredSlides: true,
     },
     900: {
@@ -175,29 +173,47 @@ new Swiper(".cases__modal-slider__inner", {
   effect: "fade",
 });
 
+const tabs = document.getElementById("tabs");
+const contents = document.querySelectorAll(".program__content");
+
 const showItems = function () {
   let selectHeader = document.querySelectorAll(".select__header");
-  let selectItem = document.querySelectorAll(".select__item");
-
+  let selectItems = document.querySelectorAll(".select__item");
   selectHeader.forEach(item => {
     item.addEventListener("click", selectToggle);
   });
 
-  selectItem.forEach(item => {
-    item.addEventListener("click", selectChoos);
+  selectItems.forEach(item => {
+    item.addEventListener("click", selectItem);
   });
 
   function selectToggle() {
     this.parentElement.classList.toggle("active");
   }
 
-  function selectChoos() {
+  function selectItem() {
     let text = this.innerText;
     let select = this.closest(".select");
-    let curentText = select.querySelector(".select__title");
-    curentText.innerText = text;
-    select.classList.remove("active");
+    let currentText = select.querySelector(".select__title");
+
+    currentText.innerText = text;
+    select.classList.add("active");
+    manageTabs(this.dataset.btn);
+  }
+};
+const manageTabs = tabId => {
+  for (let i = 0; i < tabs.children.length; i++) {
+    tabs.children[i].classList.remove("active");
+  }
+
+  document.querySelector(`.program__tab[data-btn='${tabId}']`).classList.add("active");
+
+  for (let i = 0; i < contents.length; i++) {
+    contents[i].classList.remove("active");
+    if (contents[i].dataset.content === tabId) {
+      contents[i].classList.add("active");
+    }
   }
 };
 
-showItems();
+tabs.addEventListener("click", e => manageTabs(e.target.dataset.btn));

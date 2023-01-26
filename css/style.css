@@ -217,10 +217,11 @@ body {
   position: relative;
 }
 .smm__item {
+  background-image: url("../images/smm-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  border-radius: 41px;
+  border-radius: 41px 41px 41px 41px;
   min-height: 500px;
   height: 100%;
   padding: 30px 30px 0 80px;
@@ -1244,9 +1245,10 @@ body {
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 12px 12px 0px 0px;
     position: sticky;
-    bottom: 44px;
+    top: calc(100vh - 44px);
     left: 0;
     padding: 0 20px;
+    z-index: 100;
   }
   .show__btn {
     font-family: "OnestMedium";
@@ -1368,6 +1370,7 @@ body {
   .smm__item {
     padding-left: 20px;
     padding-right: 47px;
+    background-image: url("../images/smm-bg-320.jpg");
     border-radius: 0px 0px 10px 10px;
   }
   .smm__title {
@@ -1432,7 +1435,7 @@ body {
     height: 19px;
   }
   .income {
-    padding-top: 40px;
+    padding-top: 0px;
   }
   .income__inner {
     padding-top: 85px;
@@ -1570,8 +1573,9 @@ body {
     display: block;
     position: absolute;
     top: 69px;
-    left: 0px;
-    width: 100%;
+    left: 5%;
+    width: 90%;
+    margin: 10px auto;
     padding-left: 18px;
     background-color: #ffffff;
     z-index: 2;
@@ -1580,11 +1584,14 @@ body {
     font-size: 15px;
     line-height: 150%;
     width: 90%;
-    margin-bottom: 15px;
+    margin: 0 26px;
     background: #2a2a2a;
     border-radius: 10px;
     padding: 9px 20px;
     color: #ffffff;
+  }
+  .select__item:last-child {
+    border-bottom: none;
   }
   .select.active .select__icon {
     transform: rotate(180deg);
@@ -1778,6 +1785,153 @@ body {
     font-size: 20px;
     line-height: 150%;
     margin-bottom: -60px;
+  }
+
+  .cases {
+    position: relative;
+  }
+  .cases__user {
+    height: 289px;
+    width: 250px;
+    margin: 0 auto;
+  }
+  .cases__inner {
+    position: relative;
+    height: 402px;
+  }
+  .cases__item-wrepp {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .cases__btn-next,
+  .cases__btn-prev {
+    filter: drop-shadow(-5px 0px 10px rgba(0, 0, 0, 0.25));
+    top: 50%;
+  }
+  .cases__user-name {
+    font-size: 12px;
+  }
+  .cases__jump-title {
+    text-align: left;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .cases__jump-num {
+    font-size: 12px;
+    line-height: 150%;
+    width: 82px;
+    height: 27px;
+  }
+  .cases__read {
+    margin-left: 0;
+    transform: translateX(0);
+    margin-top: 20px;
+    background-color: transparent;
+    color: #2a2a2a;
+    border: 1px solid #2a2a2a;
+    font-size: 14px;
+    line-height: 150%;
+    width: 175px;
+    padding: 10px 0;
+  }
+  .cases__btn {
+    background-color: #2a2a2a;
+    font-size: 14px;
+    line-height: 150%;
+    padding: 11px 0;
+    width: 175px;
+    height: auto;
+  }
+  .cases__btn-wrapp {
+    display: inline-block;
+    padding-top: 0;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+    width: 175px;
+  }
+  .cases__btn-decor {
+    display: none;
+  }
+
+  .cases__modal {
+    padding: 30px;
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .fancybox-slide--html .fancybox-close-small {
+    right: 32px;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+  }
+  .cases__modal-photo {
+    width: 80px;
+    height: 80px;
+  }
+  .cases__modal-name {
+    margin-bottom: 10px;
+  }
+  .cases__modal-name__title {
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .cases__modal-name__subtitle {
+    font-size: 12px;
+    line-height: 150%;
+    padding-left: 24px;
+    width: 100%;
+  }
+  .cases__modal-name__subtitle::before {
+    width: 16px;
+    height: 16px;
+  }
+  .cases__modal-user dl {
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+  .cases__modal-descr {
+    font-size: 15px;
+    line-height: 150%;
+    max-width: 298px;
+    margin-bottom: auto;
+  }
+  .cases__modal-jump__item {
+    padding: 10px 12px;
+    max-width: 146px;
+  }
+  .cases__modal-jump__title {
+    font-size: 12px;
+    line-height: 150%;
+    font-family: "Montserrat-Regular";
+  }
+  .cases__modal-jump__title:first-child {
+    margin-bottom: 5px;
+    font-family: "Montserrat-Regular";
+    width: 100%;
+  }
+  .cases__modal-jump__title:first-child::after {
+    display: none;
+  }
+  .cases__modal-jump__subtitle {
+    font-size: 12px;
+    line-height: 150%;
+    position: relative;
+  }
+  .cases__modal-jump__subtitle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+  }
+
+  .cases__modal-slider__inner {
+    display: none;
   }
 
   .question {
