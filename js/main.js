@@ -45,6 +45,10 @@ $(function () {
     }
     $(this).toggleClass("active").next().slideToggle(300);
   });
+
+  $(".cases__modal-show__slider").on("click", function () {
+    $(".cases__modal-slider__inner--close").css("display", "block");
+  });
 });
 
 const rangeSlider = document.getElementById("range__slider");
@@ -77,24 +81,25 @@ noUiSlider
     $(".noUi-horizontal .noUi-handle").toggleClass("senior", currentValue >= 0.78);
   });
 
-// const changeClass = el => {
-//   for (let i = 0; i < tabs.children.length; i++) {
-//     tabs.children[i].classList.remove("active");
-//   }
-//   el.classList.add("active");
-// };
+const tabs = document.getElementById("tabs");
+const contents = document.querySelectorAll(".program__content");
 
-// tabs.addEventListener("click", e => {
-//   const currTab = e.target.dataset.btn;
-//   changeClass(e.target);
+const manageTabs = tabId => {
+  for (let i = 0; i < tabs.children.length; i++) {
+    tabs.children[i].classList.remove("active");
+  }
 
-//   for (let i = 0; i < contents.length; i++) {
-//     contents[i].classList.remove("active");
-//     if (contents[i].dataset.content === currTab) {
-//       contents[i].classList.add("active");
-//     }
-//   }
-// });
+  document.querySelector(`.program__tab[data-btn='${tabId}']`).classList.add("active");
+
+  for (let i = 0; i < contents.length; i++) {
+    contents[i].classList.remove("active");
+    if (contents[i].dataset.content === tabId) {
+      contents[i].classList.add("active");
+    }
+  }
+};
+
+tabs.addEventListener("click", e => manageTabs(e.target.dataset.btn));
 
 const swiperBig = new Swiper(".feedback__slides-wrapp", {
   initialSlide: 2,
@@ -173,12 +178,10 @@ new Swiper(".cases__modal-slider__inner", {
   effect: "fade",
 });
 
-const tabs = document.getElementById("tabs");
-const contents = document.querySelectorAll(".program__content");
-
 const showItems = function () {
   let selectHeader = document.querySelectorAll(".select__header");
   let selectItems = document.querySelectorAll(".select__item");
+
   selectHeader.forEach(item => {
     item.addEventListener("click", selectToggle);
   });
@@ -195,25 +198,10 @@ const showItems = function () {
     let text = this.innerText;
     let select = this.closest(".select");
     let currentText = select.querySelector(".select__title");
-
     currentText.innerText = text;
-    select.classList.add("active");
+    select.classList.remove("active");
     manageTabs(this.dataset.btn);
   }
 };
-const manageTabs = tabId => {
-  for (let i = 0; i < tabs.children.length; i++) {
-    tabs.children[i].classList.remove("active");
-  }
 
-  document.querySelector(`.program__tab[data-btn='${tabId}']`).classList.add("active");
-
-  for (let i = 0; i < contents.length; i++) {
-    contents[i].classList.remove("active");
-    if (contents[i].dataset.content === tabId) {
-      contents[i].classList.add("active");
-    }
-  }
-};
-
-tabs.addEventListener("click", e => manageTabs(e.target.dataset.btn));
+showItems();
