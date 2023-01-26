@@ -1224,7 +1224,7 @@ body {
     background-size: 999px 100%;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 460px) {
   .title {
     font-size: 22px;
     line-height: 130%;
@@ -1476,6 +1476,14 @@ body {
     width: 2px;
     height: 2px;
   }
+  .speaker__info::after {
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: -70px;
+    transform: translateX(-50%);
+    background-size: 17px 23px;
+  }
 
   .question {
     padding-top: 40px;
@@ -1490,10 +1498,13 @@ body {
   }
   .question__title {
     font-size: 12px;
+    line-height: 150%;
   }
   .question__title::after {
     width: 15px;
     height: 9px;
+    top: 6px;
+    right: -3px;
   }
   .question__body {
     font-size: 10px;
