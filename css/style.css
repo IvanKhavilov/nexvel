@@ -1844,14 +1844,16 @@ body {
     padding: 11px 0;
     width: 175px;
     height: auto;
+    margin: 0;
   }
   .cases__btn-wrapp {
     display: inline-block;
     padding-top: 0;
     position: absolute;
     bottom: 0;
-    right: 120px;
+    right: 5%;
     width: 175px;
+    z-index: 10;
   }
   .cases__btn-decor {
     display: none;
@@ -1964,5 +1966,16 @@ body {
   .question__title.active {
     padding-bottom: 5px;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .cases__read {
+    width: 135px;
+  }
+  .cases__btn-wrapp {
+    width: 135px;
+  }
+  .cases__btn {
+    width: 135px;
   }
 }
