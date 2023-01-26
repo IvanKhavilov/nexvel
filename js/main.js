@@ -1,4 +1,29 @@
 $(function () {
+  $(".menu__btn").on("click", function () {
+    $(".menu__btn").toggleClass("active");
+    $(".menu__list").toggleClass("active");
+    $(".header__top").toggleClass("hide");
+  });
+
+  $(".smm__inner").slick({
+    fade: true,
+    arrows: false,
+    autoplay: true,
+    infinity: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: ".smm__btn-wrapp",
+  });
+  $(".smm__btn-wrapp").slick({
+    fade: true,
+    arrows: false,
+    autoplay: true,
+    infinity: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: ".smm__inner",
+  });
+
   $(".menu a").on("click", function () {
     var id = $(this).attr("href"),
       top = $(id).offset().top;
@@ -94,12 +119,12 @@ tabs.addEventListener("click", e => {
 });
 
 const swiperBig = new Swiper(".feedback__slides-wrapp", {
-  loop: true,
   initialSlide: 2,
   spaceBetween: 10,
   slidesPerView: 5,
   spaceBetween: 32,
   centeredSlides: true,
+  watchSlidesProgress: true,
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -110,11 +135,10 @@ const swiperBig = new Swiper(".feedback__slides-wrapp", {
   },
 });
 const swiper2 = new Swiper(".thumbs__swiper", {
-  loop: true,
   effect: "fade",
-  freeMode: true,
   initialSlide: 2,
   slidesPerView: 1,
+  watchSlidesProgress: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

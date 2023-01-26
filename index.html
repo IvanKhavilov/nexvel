@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/nouislider.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -32,9 +33,9 @@
               EDUCATION
             </a>
             <nav class="menu">
-              <button class="menu__btn">
+              <div class="menu__btn">
                 <span></span>
-              </button>
+              </div>
               <ul class="menu__list">
                 <li class="menu__item">
                   <a class="menu__link" href="#abour">Про нас</a>
@@ -59,18 +60,48 @@
       <section class="smm">
         <div class="container">
           <div class="smm__inner">
-            <div class="smm__income">Дохід: від <b>400$</b> / мес</div>
-            <div class="smm__descr">
-              <h1 class="smm__title">SMM-менеджер</h1>
-              <p class="smm__subtitle">Навчись просувати бізнеси в інтернеті і заробляй від 500$ вже з цього місяця</p>
+            <div class="smm__item" style="background-image: url(images/smm-bg.jpg)">
+              <div class="smm__income">Дохід: від <b>400$</b> / мес</div>
+              <div class="smm__descr">
+                <h1 class="smm__title">SMM-менеджер</h1>
+                <p class="smm__subtitle">Навчись просувати бізнеси в інтернеті і заробляй від 500$ вже з цього місяця</p>
+              </div>
             </div>
+            <div class="smm__item" style="background-image: url(images/targetolog.jpg)">
+              <div class="smm__income">Дохід: від <b>500$</b> / мес</div>
+              <div class="smm__descr">
+                <h1 class="smm__title">Таргетолог</h1>
+                <p class="smm__subtitle">Почни заробляти від 500$ вже цього місяця налаштовуючи рекламу в інтернеті</p>
+              </div>
+            </div>
+            <div class="smm__item" style="background-image: url(images/telegram-bg.jpg)">
+              <div class="smm__income">Дохід: від <b>500$</b> / мес</div>
+              <div class="smm__descr">
+                <h1 class="smm__title">Телеграм-магазин</h1>
+                <p class="smm__subtitle">
+                  Створи свою товарну справу в Телеграмі і вийди на дохід від 500$ на місяць без закупівлі товару
+                </p>
+              </div>
+            </div>
+            <div class="smm__item" style="background-image: url(images/insta-bg.jpg)">
+              <div class="smm__income">Дохід: від <b>500$</b> / мес</div>
+              <div class="smm__descr">
+                <h1 class="smm__title">Інстаграм-магазин</h1>
+                <p class="smm__subtitle">Створи свій онлайн-магазин в Інстаграм і заробляй від 500$ на місяць без вкладень</p>
+              </div>
+            </div>
+          </div>
+          <div class="smm__btn-wrapp">
+            <button class="smm__btn">Записатися на курс 🚀</button>
+            <button class="smm__btn">Записатися на курс 🚀</button>
+            <button class="smm__btn">Записатися на курс 🚀</button>
             <button class="smm__btn">Записатися на курс 🚀</button>
           </div>
         </div>
       </section>
     </header>
 
-    <section class="video">
+    <!-- <section class="video">
       <div class="container">
         <h2 class="title">Що буде у навчанні:</h2>
         <div class="video__inner" style="background-image: url(images/video-bg.jpg)">
@@ -546,9 +577,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
