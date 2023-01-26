@@ -1433,4 +1433,73 @@ body {
     top: -10px;
     right: -10px;
   }
+
+  .speaker {
+    padding-top: 40px;
+  }
+  .speaker__inner {
+    padding-left: 0;
+    padding-top: 70px;
+  }
+  .speaker__info {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0 20px 45px;
+  }
+  .speaker__photo {
+    width: 240px;
+    height: 240px;
+    margin: -50px auto 30px auto;
+    transform: translateX(0%);
+  }
+  .speaker__descr {
+    margin-left: 0;
+  }
+  .speaker__name {
+    font-size: 20px;
+  }
+  .speaker__subname {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .speaker__item {
+    font-size: 12px;
+    padding-left: 18px;
+  }
+  .speaker__item + .speaker__item {
+    margin-top: 20px;
+  }
+  .speaker__item::before {
+    top: 8px;
+    left: 8px;
+    width: 2px;
+    height: 2px;
+  }
+
+  .question {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  .question__inner {
+    padding-top: 20px;
+  }
+  .question__item {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .question__title {
+    font-size: 12px;
+  }
+  .question__title::after {
+    width: 15px;
+    height: 9px;
+  }
+  .question__body {
+    font-size: 10px;
+  }
+  .question__title.active {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
 }
