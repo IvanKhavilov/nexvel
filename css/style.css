@@ -125,7 +125,7 @@ body {
   font-size: 24px;
   line-height: 130%;
   color: #2e2e2e;
-  background-image: url("../images/bodybg.png");
+  background-image: url("../images/body-bg.jpg");
   background-size: auto;
   background-repeat: repeat;
 }
@@ -1224,7 +1224,11 @@ body {
     background-size: 999px 100%;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 425px) {
+  .title {
+    font-size: 22px;
+    line-height: 130%;
+  }
   .header__bottom {
     background-image: none;
   }
@@ -1367,5 +1371,66 @@ body {
     background-size: cover;
     top: 78px;
     right: -16px;
+  }
+  .video {
+    padding-top: 140px;
+  }
+  .video__inner {
+    height: 398px;
+    margin-top: 20px;
+  }
+  .video__inner::after {
+    width: 40px;
+    height: 40px;
+    background-size: 17px 23px;
+    right: 20px;
+    top: -20px;
+  }
+  .video__play {
+    width: 54px;
+    height: 37px;
+    border-radius: 11px;
+  }
+  .video__play svg {
+    width: 19px;
+    height: 19px;
+  }
+  .income {
+    padding-top: 40px;
+  }
+  .income__inner {
+    padding-top: 85px;
+  }
+  .income__values {
+    font-size: 10px;
+    line-height: 150%;
+    padding-top: 25px;
+  }
+  .noUi-target {
+    height: 2px;
+    transform: translateX(0);
+    width: 90%;
+    margin: 0 auto;
+  }
+  .noUi-tooltip {
+    font-size: 9px;
+    line-height: 14px;
+    padding: 5px;
+  }
+  .income__calc::after,
+  .range__slider::after,
+  .range__slider::before {
+    width: 8px;
+    height: 8px;
+    top: -3px;
+  }
+  .range__slider::before {
+    left: -3px;
+  }
+  .noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right: -10px;
   }
 }
