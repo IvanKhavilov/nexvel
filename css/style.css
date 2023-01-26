@@ -458,7 +458,7 @@ body {
   justify-content: space-between;
   padding: 40px 0;
 }
-.program__tabs-select {
+.select {
   display: none;
 }
 .program__tab {
@@ -1478,6 +1478,9 @@ body {
   }
   .program__inner {
     padding: 20px 0px 40px 0px;
+  }
+  .select {
+    display: block;
   }
   .program__tabs {
     display: none;
