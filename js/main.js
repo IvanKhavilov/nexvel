@@ -5,25 +5,6 @@ $(function () {
     $(".header__top").toggleClass("hide");
   });
 
-  $(".smm__inner").slick({
-    fade: true,
-    arrows: false,
-    autoplay: true,
-    infinity: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: ".smm__btn-wrapp",
-  });
-  $(".smm__btn-wrapp").slick({
-    fade: true,
-    arrows: false,
-    autoplay: true,
-    infinity: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: ".smm__inner",
-  });
-
   $(".menu a").on("click", function () {
     var id = $(this).attr("href"),
       top = $(id).offset().top;
@@ -120,7 +101,6 @@ tabs.addEventListener("click", e => {
 
 const swiperBig = new Swiper(".feedback__slides-wrapp", {
   initialSlide: 2,
-  spaceBetween: 10,
   slidesPerView: 5,
   spaceBetween: 32,
   centeredSlides: true,
@@ -132,6 +112,14 @@ const swiperBig = new Swiper(".feedback__slides-wrapp", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    450: {
+      initialSlide: 1,
+      slidesPerView: 5,
+      centeredSlides: true,
+      spaceBetween: 12,
+    },
   },
 });
 const swiper2 = new Swiper(".thumbs__swiper", {
@@ -146,6 +134,11 @@ const swiper2 = new Swiper(".thumbs__swiper", {
   thumbs: {
     swiper: swiperBig,
   },
+  breakpoints: {
+    450: {
+      initialSlide: 1,
+    },
+  },
 });
 
 new Swiper(".cases__inner", {
@@ -155,6 +148,18 @@ new Swiper(".cases__inner", {
   },
   slidesPerView: 3.5,
   spaceBetween: 40,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+    },
+    900: {
+      slidesPerView: 2.5,
+    },
+    1300: {
+      slidesPerView: 3.5,
+    },
+  },
 });
 
 new Swiper(".cases__modal-slider__inner", {
@@ -169,3 +174,30 @@ new Swiper(".cases__modal-slider__inner", {
   slidesPerView: 1,
   effect: "fade",
 });
+
+const showItems = function () {
+  let selectHeader = document.querySelectorAll(".select__header");
+  let selectItem = document.querySelectorAll(".select__item");
+
+  selectHeader.forEach(item => {
+    item.addEventListener("click", selectToggle);
+  });
+
+  selectItem.forEach(item => {
+    item.addEventListener("click", selectChoos);
+  });
+
+  function selectToggle() {
+    this.parentElement.classList.toggle("active");
+  }
+
+  function selectChoos() {
+    let text = this.innerText;
+    let select = this.closest(".select");
+    let curentText = select.querySelector(".select__title");
+    curentText.innerText = text;
+    select.classList.remove("active");
+  }
+};
+
+showItems();
