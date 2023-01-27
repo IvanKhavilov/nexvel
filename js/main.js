@@ -58,6 +58,14 @@ $(function () {
     nextArrow:
       '<button type="button" class="speaker-next slick-next"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.63965 1.28833L8.35128 7.99996L1.63965 14.7116" stroke="white" stroke-width="1.61918" stroke-linecap="round"/></svg></button>',
   });
+  $(".cases__modal-slider").slick({
+    infinite: false,
+    fade: true,
+    prevArrow:
+      '<button type="button" class="cases__modal-prev slick-prev"><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.1308 1.2547L1.38541 13L13.1308 24.7454" stroke="#323232" stroke-width="1.61918" stroke-linecap="round"/></svg></button>',
+    nextArrow:
+      '<button type="button" class="cases__modal-next slick-next"><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.869141 1.2547L12.6145 13L0.869141 24.7454" stroke="#323232" stroke-width="1.61918" stroke-linecap="round"/></svg></button>',
+  });
 });
 
 const rangeSlider = document.getElementById("range__slider");
