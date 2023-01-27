@@ -174,19 +174,6 @@ new Swiper(".cases__inner", {
   },
 });
 
-new Swiper(".cases__modal-slider__inner", {
-  pagination: {
-    el: ".cases-pagination",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".cases__modal-slider-next",
-    prevEl: ".cases__modal-slider-prev",
-  },
-  slidesPerView: 1,
-  effect: "fade",
-});
-
 const showItems = function () {
   let selectHeader = document.querySelectorAll(".select__header");
   let selectItems = document.querySelectorAll(".select__item");
