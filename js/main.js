@@ -49,6 +49,15 @@ $(function () {
   $(".cases__modal-show__slider").on("click", function () {
     $(".cases__modal-slider__inner--close").css("display", "block");
   });
+
+  $(".speaker__inner").slick({
+    infinite: false,
+    fade: true,
+    prevArrow:
+      '<button type="button" class="speaker-prev slick-prev"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.36035 1.28833L1.64872 7.99996L8.36035 14.7116" stroke="white" stroke-width="1.61918" stroke-linecap="round"/></svg></button>',
+    nextArrow:
+      '<button type="button" class="speaker-next slick-next"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.63965 1.28833L8.35128 7.99996L1.63965 14.7116" stroke="white" stroke-width="1.61918" stroke-linecap="round"/></svg></button>',
+  });
 });
 
 const rangeSlider = document.getElementById("range__slider");

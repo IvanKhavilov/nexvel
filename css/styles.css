@@ -542,8 +542,12 @@ body {
   padding-top: 40px;
   padding-left: 40px;
 }
+.speaker__inner .slick-list {
+  padding-top: 70px;
+  padding-left: 0px;
+}
 .speaker__info {
-  display: flex;
+  display: flex !important;
   align-items: center;
   background: #2a2a2a;
   box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.1);
@@ -571,11 +575,10 @@ body {
 .speaker__photo {
   max-width: 350px;
   transform: translateX(-40px);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.56%, rgba(0, 0, 0, 0.7) 100%), url(.jpg),
-    linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
 }
 .speaker__img {
   max-width: 100%;
@@ -618,6 +621,30 @@ body {
 }
 .speaker__item + .speaker__item {
   margin-top: 30px;
+}
+.speaker__inner .slick-list {
+  padding-left: 0;
+}
+.speaker-prev,
+.speaker-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #323232;
+  border: none;
+  z-index: 5;
+  bottom: 300px;
+}
+.speaker-prev {
+  left: 15px;
+}
+.speaker-next {
+  left: 370px;
+}
+.speaker-prev.slick-disabled,
+.speaker-next.slick-disabled {
+  opacity: 0;
 }
 
 .price {
@@ -1437,32 +1464,6 @@ body {
     position: relative;
     height: 100%;
   }
-  .show__btn-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 115px;
-    background: #ffffff;
-    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 12px 12px 0px 0px;
-    position: sticky;
-    top: calc(100vh - 115px);
-    left: 0;
-    padding: 0 20px;
-    z-index: 100;
-  }
-  .show__btn {
-    font-family: "OnestMedium";
-    color: #ffffff;
-    background: #c20908;
-    border-radius: 70px;
-    font-size: 16px;
-    line-height: 150%;
-    border: none;
-    width: 100%;
-    height: 50px;
-  }
   .title {
     text-align: center;
     font-size: 24px;
@@ -1853,6 +1854,16 @@ body {
     transform: translateX(-50%);
     background-size: 17px 23px;
   }
+  .speaker-prev,
+  .speaker-next {
+    bottom: 560px;
+  }
+  .speaker-prev {
+    left: 30px;
+  }
+  .speaker-next {
+    left: 370px;
+  }
 
   .price {
     padding-top: 40px;
@@ -1954,13 +1965,13 @@ body {
   }
   .feedback__slide.swiper-slide-active {
     padding: 0;
-    height: 360px;
+    height: 380px;
     width: 235px !important;
     overflow: visible;
   }
   .feedback__slide.swiper-slide-active .feedback__img {
     width: 235px;
-    height: 360px;
+    height: 380px;
   }
   .feedback__slides {
     margin-left: -90px;
