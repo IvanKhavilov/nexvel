@@ -205,3 +205,21 @@ const showItems = function () {
 };
 
 showItems();
+
+const btnForm = document.querySelectorAll(".price__btn");
+const modalWindow = document.querySelector(".modal-window");
+const overlay = document.getElementById("overlay");
+const btnClose = document.querySelector(".btn-close");
+
+for (let i = 0; i < btnForm.length; i++) {
+  btnForm[i].addEventListener("click", function () {
+    modalWindow.classList.add("active");
+  });
+}
+
+function closeModal() {
+  modalWindow.classList.remove("active");
+}
+
+overlay.addEventListener("click", closeModal);
+btnClose.addEventListener("click", closeModal);
