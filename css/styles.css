@@ -2246,6 +2246,11 @@ body {
   .cases__modal-prev svg path {
     stroke: #ffffff;
   }
+  .cases__modal-next svg,
+  .cases__modal-prev svg {
+    width: 8px;
+    height: 13px;
+  }
 
   .question {
     padding-top: 40px;
@@ -2300,8 +2305,10 @@ body {
   .cases__modal-next,
   .cases__modal-prev {
     width: 110px;
-    top: 100%;
-    bottom: 0;
+    top: 490px;
+  }
+  .feedback__slides {
+    margin-left: -95px;
   }
   .price__btn {
     width: 124%;
@@ -2321,5 +2328,8 @@ body {
   }
   .speaker-prev {
     left: 0px;
+  }
+  .feedback__slides {
+    margin-left: -102px;
   }
 }
