@@ -3,6 +3,7 @@ $(function () {
     $('.menu__btn').toggleClass('active')
     $('.menu__list').toggleClass('active')
     $('.overlay__menu').toggleClass('active')
+    $('.header__top').toggleClass('active')
   })
 
   $('.menu a').on('click', function () {
@@ -37,37 +38,14 @@ $(function () {
   $('.question__title').click(function (even) {
     if ($('.question__inner').hasClass('question__inner--one')) {
       $('.question__title').not($(this)).removeClass('active')
-      $('.question__body').not($(this).next()).slideUp(300)
+      $('.question__body').not($(this).next()).slideUp(400)
     }
-    $(this).toggleClass('active').next().slideToggle(300)
+    $(this).toggleClass('active').next().slideToggle(400)
   })
 
   // $('.cases__modal-show__slider').on('click', function () {
   //   $('.cases__modal-slider__inner--close').css('display', 'block')
   // })
-
-  $('.thumbs__swiper').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    infinite: true,
-    asNavFor: '.feedback__slides',
-  })
-  $('.feedback__slides').slick({
-    arrows: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    centerMode: true,
-    infinite: true,
-    focusOnSelect: true,
-    variableWidth: true,
-    asNavFor: '.thumbs__swiper',
-    prevArrow:
-      '<button type="button" class="feadback-prev slick-prev"><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.1308 1.25473L1.38541 13.0001L13.1308 24.7454" stroke="#323232" stroke-width="1.61918" stroke-linecap="round"/></svg></button>',
-    nextArrow:
-      '<button type="button" class="feadback-next slick-next"><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.869232 1.25473L12.6146 13.0001L0.869232 24.7454" stroke="#323232" stroke-width="1.61918" stroke-linecap="round"/></svg></button>',
-  })
 
   $('.speaker__inner').slick({
     infinite: false,
@@ -179,3 +157,47 @@ function closeModal() {
 }
 overlay.addEventListener('click', closeModal)
 btnClose.addEventListener('click', closeModal)
+
+const swiperBig = new Swiper('.feedback__slides-wrapp', {
+  loop: true,
+  spaceBetween: 32,
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  initialSlide: 2,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // breakpoints: {
+  //   0: {
+  //     slidesPerView: 'auto',
+  //   },
+  //   460: {
+  //     slidesPerView: 'auto',
+  //     spaceBetween: 18,
+  //   },
+  //   860: {
+  //     slidesPerView: 'auto',
+  //     spaceBetween: 30,
+  //   },
+  // },
+})
+
+const swiper2 = new Swiper('.thumbs__swiper', {
+  loop: true,
+  effect: 'fade',
+  initialSlide: 2,
+  slidesPerView: 1,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: swiperBig,
+  },
+})
