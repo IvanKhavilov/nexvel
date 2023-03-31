@@ -43,8 +43,16 @@ $(function () {
     $(this).toggleClass('active').next().slideToggle(400)
   })
 
-  $('.cases__modal-show__slider').on('click', function () {
-    $('.cases__modal-slider__inner--close').toggleClass('active')
+  $('.cases__modal-show__slider').each(function (even) {
+    $(this).click(function () {
+      $('.cases__modal-slider__inner--close').fadeIn('slow')
+      $('.cases__modal-close__slider').toggleClass('active')
+    })
+  })
+
+  $('.cases__modal-close__slider').on('click', function () {
+    $('.cases__modal-slider__inner--close').fadeOut('slow')
+    $('.cases__modal-close__slider').toggleClass('active')
   })
 
   $('.speaker__inner').slick({
@@ -68,7 +76,6 @@ $(function () {
       {
         breakpoint: 461,
         settings: {
-          // fade: true,
           slidesToShow: 1,
           centerMode: true,
         },
@@ -181,19 +188,6 @@ const swiperBig = new Swiper('.feedback__slides-wrapp', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // breakpoints: {
-  //   0: {
-  //     slidesPerView: 'auto',
-  //   },
-  //   460: {
-  //     slidesPerView: 'auto',
-  //     spaceBetween: 18,
-  //   },
-  //   860: {
-  //     slidesPerView: 'auto',
-  //     spaceBetween: 30,
-  //   },
-  // },
 })
 
 const swiper2 = new Swiper('.thumbs__swiper', {
