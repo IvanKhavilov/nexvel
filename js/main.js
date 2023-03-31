@@ -44,12 +44,12 @@ $(function () {
   })
 
   $('.cases__modal-show__slider').on('click', function () {
-    $('.cases__modal-slider__inner--close').fadeIn('slow')
+    $('.cases__modal-slider__inner--close').show(400)
     $('.cases__modal-close__slider').toggleClass('active')
   })
 
   $('.cases__modal-close__slider').on('click', function () {
-    $('.cases__modal-slider__inner--close').fadeOut('slow')
+    $('.cases__modal-slider__inner--close').hide(400)
     $('.cases__modal-close__slider').toggleClass('active')
   })
 
