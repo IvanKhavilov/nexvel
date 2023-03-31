@@ -43,11 +43,9 @@ $(function () {
     $(this).toggleClass('active').next().slideToggle(400)
   })
 
-  $('.cases__modal-show__slider').each(function (even) {
-    $(this).click(function () {
-      $('.cases__modal-slider__inner--close').fadeIn('slow')
-      $('.cases__modal-close__slider').toggleClass('active')
-    })
+  $('.cases__modal-show__slider').on('click', function () {
+    $('.cases__modal-slider__inner--close').fadeIn('slow')
+    $('.cases__modal-close__slider').toggleClass('active')
   })
 
   $('.cases__modal-close__slider').on('click', function () {
